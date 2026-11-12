@@ -126,7 +126,7 @@ npm run dev
 
 Frontend: http://localhost:5173
 
-Backend: http://localhost:5000
+Backend: http://https://roamnest-ut9w.onrender.com
 
 ## 🔐 Environment Variables
 

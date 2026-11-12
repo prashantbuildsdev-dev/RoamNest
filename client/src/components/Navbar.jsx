@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import SearchBar from "./SearchBar";
 
-const API_URL = "http://localhost:5000";
+import API_URL from "../api";
 
 const categories = [
     { name: "Trending", icon: "fa-solid fa-fire" },

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "./Home.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "";
 
 function Home() {
 

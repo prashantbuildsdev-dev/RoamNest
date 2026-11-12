@@ -2,8 +2,7 @@ import "./MyBookings.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMessage } from "../context/MessageContext";
-
-const API_URL = "http://localhost:5000";
+import API_URL from "../api";
 
 function MyBookings() {
 

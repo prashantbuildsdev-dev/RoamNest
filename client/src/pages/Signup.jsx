@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css";
 import { useMessage } from "../context/MessageContext";
-
-const API_URL = "http://localhost:5000";
+import API_URL from "../api";
 
 function Signup() {
 

@@ -3,8 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Auth.css";
 import Navbar from "../components/Navbar";
 import { useMessage } from "../context/MessageContext";
-
-const API_URL = "http://localhost:5000";
+import API_URL from "../api";
 
 function Login() {
 

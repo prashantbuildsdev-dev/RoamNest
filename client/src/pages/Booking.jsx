@@ -2,6 +2,7 @@ import "./Booking.css";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useMessage } from "../context/MessageContext";
+import API_URL from "../api";
 
 function Booking() {
 
@@ -32,8 +33,7 @@ function Booking() {
             try {
 
                 const response = await fetch(
-                    `http://localhost:5000/listings/${id}`,
-                    {
+                `${API_URL}/listings/${id}`,                    {
                         credentials: "include"
                     }
                 );
@@ -115,7 +115,7 @@ function Booking() {
             setLoading(true);
 
             const response = await fetch(
-                "http://localhost:5000/bookings",
+                `${API_URL}/bookings`,
                 {
                     method: "POST",
 

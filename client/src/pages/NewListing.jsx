@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "./NewListing.css";
+import API_URL from "../api";
 
 const NewListing = () => {
     const navigate = useNavigate();
@@ -102,7 +103,7 @@ const NewListing = () => {
             data.append("image", image);
 
             const response = await fetch(
-                "http://localhost:5000/listings",
+                `${API_URL}/listings`,
                 {
                     method: "POST",
                     credentials: "include",

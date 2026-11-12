@@ -3,8 +3,8 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Navbar from "../components/Navbar";
 import "./ListingDetails.css";
+import API_URL from "../api";
 
-const API_URL = "http://localhost:5000";
 
 const fetchListingData = async (id) => {
     const response = await fetch(`${API_URL}/listings/${id}`, {

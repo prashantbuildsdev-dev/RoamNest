@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./EditListing.css";
+import API_URL from "../api";
 
-const API_URL = "http://localhost:5000";
 
 function EditListing() {
 

@@ -10,6 +10,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo").default;
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
+const path = require("path");
 
 const User = require("./models/user.js");
 
@@ -22,6 +23,11 @@ const app = express();
 
 const dbUrl = process.env.ATLASDB_URL;
 const PORT = process.env.PORT || 5000;
+
+// Render proxy
+if (process.env.NODE_ENV === "production") {
+    app.set("trust proxy", 1);
+}
 
 // CORS
 app.use(cors({
@@ -53,7 +59,7 @@ app.use(
             maxAge: 7 * 24 * 60 * 60 * 1000,
             httpOnly: true,
             sameSite: "lax",
-            secure: false
+            secure: process.env.NODE_ENV === "production"
         }
     })
 );
@@ -75,22 +81,35 @@ app.use("/listings/:id/reviews", reviewRouter);
 // Authentication routes
 app.use("/auth", userRouter);
 
-//Booking Routes
+// Booking routes
 app.use("/bookings", bookingRouter);
 
-// API home route
-app.get("/", (req, res) => {
-    res.json({
-        success: true,
-        message: "Welcome to RoamNest API!"
-    });
+// API 404
+app.use((req, res, next) => {
+    if (
+        req.path.startsWith("/listings") ||
+        req.path.startsWith("/auth") ||
+        req.path.startsWith("/bookings")
+    ) {
+        return res.status(404).json({
+            success: false,
+            message: "API route not found."
+        });
+    }
+
+    next();
 });
 
-// Handle unknown routes
-app.use((req, res) => {
-    res.status(404).json({
-        success: false,
-        message: "API route not found."
+// React frontend
+const clientPath = path.join(__dirname, "../client/dist");
+
+app.use(express.static(clientPath));
+
+app.get(/.*/, (req, res, next) => {
+    res.sendFile(path.join(clientPath, "index.html"), (err) => {
+        if (err) {
+            next(err);
+        }
     });
 });
 
