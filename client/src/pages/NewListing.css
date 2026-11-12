@@ -1,0 +1,78 @@
+.new-listing-container {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.new-listing-container h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.new-listing-form {
+    width: 100%;
+}
+
+.new-listing-form .form-group {
+    margin-bottom: 20px;
+}
+
+.new-listing-form label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.new-listing-form input,
+.new-listing-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.new-listing-form input:focus,
+.new-listing-form textarea:focus {
+    border-color: #fe424d;
+}
+
+.new-listing-form textarea {
+    resize: vertical;
+}
+
+.new-listing-form input[type="file"] {
+    padding: 10px;
+}
+
+.create-listing-btn {
+    background-color: #fe424d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.create-listing-btn:hover {
+    background-color: #e8323d;
+}
+
+.create-listing-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.listing-error {
+    background-color: #ffe5e5;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}

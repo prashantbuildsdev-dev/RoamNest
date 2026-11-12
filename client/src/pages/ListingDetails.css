@@ -1,0 +1,516 @@
+
+/* Main Listing Details */
+
+.listing-details {
+    width: 100%;
+    max-width: 1120px;
+    margin: 30px auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listing-details > h2 {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 22px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Listing Card */
+
+.listing-details > .listing-card {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-sizing: border-box;
+}
+
+.listing-card .listing-main-image {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    margin: 0;
+}
+
+.listing-card-body {
+    padding: 20px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.listing-card-body h3 {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.listing-card-body p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    text-align: left;
+    padding-right: 8px;
+}
+
+.listing-card-body .price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+.listing-card-body i {
+    font-style: normal;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Edit and Delete Listing Buttons */
+
+.btns {
+    display: flex;
+    gap: 12px;
+}
+
+.listing-details > .btns {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 850px;
+    margin: 20px auto;
+}
+
+.edit-btn,
+.delete-listing-btn {
+    padding: 9px 18px;
+    border: 1px solid #222;
+    border-radius: 6px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-btn:hover,
+.delete-listing-btn:hover {
+    background: #444;
+}
+
+/* Reviews Section */
+
+.listing-details > .reviews-section {
+    width: 100%;
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding-top: 28px;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.reviews-section > h3,
+.reviews-section > form,
+.reviews-section > .error {
+    grid-column: 1 / -1;
+}
+
+.reviews-section h3 {
+    font-size: 23px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+/* Review Form */
+
+.reviews-section form {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0 20px;
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.reviews-section form > label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    margin: 12px 0 10px;
+}
+
+/* Star Rating */
+/* Existing Starability design preserved */
+
+.reviews-section form .starability-slot {
+    margin: 8px 0 22px;
+}
+
+.reviews-section .starability-slot > label {
+    color: transparent;
+    font-size: 0.1em;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+/* Comment Box */
+
+.reviews-section form #comment {
+    display: block;
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid #b0b0b0;
+    border-radius: 8px;
+    background: #fff;
+    color: #222;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 15px;
+    resize: vertical;
+    outline: none;
+}
+
+.reviews-section form #comment:focus {
+    border-color: #fe424d;
+}
+
+.reviews-section form #comment::placeholder {
+    color: #777;
+}
+
+/* Submit Button */
+
+.reviews-section form button[type="submit"] {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #fe424d;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.reviews-section form button[type="submit"]:hover {
+    background: #e63946;
+}
+
+/* Review Cards */
+
+.review-card {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.review-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.review-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.review-card .starability-result {
+    margin-bottom: 10px;
+}
+
+/* Delete Review Button */
+
+.review-card button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    border: 1px solid #fe424d;
+    border-radius: 6px;
+    background: #fff;
+    color: #fe424d;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.review-card button:hover {
+    background: #fe424d;
+    color: #fff;
+}
+
+/* Map Section */
+
+.listing-details > .map-section {
+    width: 100%;
+    max-width: 850px;
+    margin: 40px auto 0;
+    padding-top: 25px;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.map-section h3 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+#map {
+    width: 100%;
+    height: 450px;
+    margin-top: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Error */
+
+.error {
+    color: #d93025;
+    margin-top: 12px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .listing-details {
+        margin: 20px auto;
+        padding: 0 16px;
+    }
+
+    .listing-details > h2 {
+        font-size: 22px;
+    }
+
+    .listing-card .listing-main-image {
+        height: 260px;
+    }
+
+    .reviews-section {
+        margin-top: 30px;
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-section form {
+        padding: 18px;
+    }
+
+    #map {
+        height: 300px;
+    }
+}
+
+.book-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #fe424d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.book-btn:hover {
+    background-color: #e73540;
+    color: white;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Mobile Responsive Improvements */
+
+@media (max-width: 600px) {
+
+    /* Main Container */
+
+    .listing-details {
+        width: 100%;
+        margin: 15px auto;
+        padding: 0 14px;
+    }
+
+    .listing-details > h2 {
+        font-size: 21px;
+        line-height: 1.4;
+        margin-bottom: 16px;
+    }
+
+    /* Listing Image */
+
+    .listing-details > .listing-card {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .listing-card .listing-main-image {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* Listing Details */
+
+    .listing-card-body {
+        padding: 18px 10px;
+    }
+
+    .listing-card-body h3 {
+        font-size: 19px;
+    }
+
+    .listing-card-body p {
+        font-size: 14px;
+        line-height: 1.6;
+        padding-right: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .listing-card-body .price {
+        font-size: 19px;
+    }
+
+    /* Action Buttons */
+
+    .listing-details > .btns {
+        width: 100%;
+        gap: 10px;
+        margin: 16px auto;
+        flex-wrap: wrap;
+    }
+
+    .edit-btn,
+    .delete-listing-btn,
+    .book-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    /* Reviews */
+
+    .listing-details > .reviews-section {
+        width: 100%;
+        margin-top: 28px;
+        padding-top: 20px;
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .reviews-section h3 {
+        font-size: 21px;
+    }
+
+    /* Review Form */
+
+    .reviews-section form {
+        width: 100%;
+        max-width: 100%;
+        margin: 8px 0 15px;
+        padding: 16px;
+    }
+
+    .reviews-section form #comment {
+        min-height: 110px;
+        font-size: 14px;
+    }
+
+    .reviews-section form button[type="submit"] {
+        width: 100%;
+    }
+
+    /* Review Cards */
+
+    .review-card {
+        width: 100%;
+        padding: 14px;
+    }
+
+    /* Map */
+
+    .listing-details > .map-section {
+        width: 100%;
+        margin-top: 28px;
+        padding-top: 20px;
+    }
+
+    .map-section h3 {
+        font-size: 21px;
+    }
+
+    #map {
+        width: 100%;
+        height: 260px;
+        margin-top: 12px;
+        border-radius: 10px;
+    }
+
+}
+
+/* Small Mobile Screens */
+
+@media (max-width: 380px) {
+
+    .listing-details {
+        padding: 0 10px;
+    }
+
+    .listing-card .listing-main-image {
+        height: 200px;
+    }
+
+    .listing-details > h2 {
+        font-size: 19px;
+    }
+
+    .edit-btn,
+    .delete-listing-btn,
+    .book-btn {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    #map {
+        height: 230px;
+    }
+
+}
