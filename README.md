@@ -122,12 +122,6 @@ Start the frontend:
 npm run dev
 ```
 
-## 🌐 Local Development
-
-Frontend: http://localhost:5173
-
-Backend: http://https://roamnest-ut9w.onrender.com
-
 ## 🔐 Environment Variables
 
 Make sure to configure your MongoDB Atlas, Cloudinary, Mapbox and other required credentials before running the application.
@@ -137,6 +131,8 @@ Make sure to configure your MongoDB Atlas, Cloudinary, Mapbox and other required
 ## 👨‍💻 Author
 
 **Prashant Kumar**
+
+🚀 Live Demo: https://roamnest-ut9w.onrender.com/
 
 GitHub: [prashantbuildsdev-dev](https://github.com/prashantbuildsdev-dev)
 
